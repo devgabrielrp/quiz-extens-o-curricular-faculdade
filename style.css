@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #ffffff; /* Fundo branco */
+}
+
+main {
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  margin-top: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #334155;
+
+}
+
+header h1 {
+  margin-top: 24px;
+  font-size: 30px;
+  color: #ffd700; /* Amarelo */
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h2 {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #ffd700; /* Amarelo */
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#quiz {
+  counter-reset: quiz-item;
+}
+
+.quiz-item {
+  margin-top: 24px;
+  border: 1px solid #ffd700; /* Amarelo */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quiz-item h3 {
+  padding: 16px 20px;
+  color: #32cd32; /* Verde */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+.quiz-item h3:before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  background-color: #ffd700; /* Amarelo */
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quiz-item dl {
+  padding: 20px 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.quiz-item dl dt {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e90ff; /* Azul */
+}
+
+input {
+  all: unset;
+  border: 1px solid #1e90ff; /* Azul */
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+input:checked {
+  border: 1px solid #32cd32; /* Verde */
+}
+
+input:checked:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #32cd32; /* Verde */
+  border-radius: 50%;
+}
+
+#acertos {
+  text-align: center;
+  background-color: #ffd700; /* Amarelo */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+}
