@@ -1,1 +1,1 @@
-# quiz-extens-o-curricular-faculdade
+# quiz-extensão-curricular-faculdade
